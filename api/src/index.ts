@@ -4,6 +4,7 @@ import serverport from "./config/index";
 import chalk from "chalk";
 import cors from "cors";
 import connectDB from "./config/connectDB";
+import userRouter from "./routes/userRouter";
 
 const app = express();
 
@@ -16,6 +17,7 @@ app.use(cors());
 const port = serverport.dev.port;
 
 // routes
+app.use("/api/users", userRouter);
 
 app.listen(port, async () => {
   try {

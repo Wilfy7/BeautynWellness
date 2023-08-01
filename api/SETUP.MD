@@ -1,37 +1,94 @@
-1. run npm init
-2. run : npm install typescript @types/node --save-dev
-3. Create a TypeScript configuration file:
+# BEAUTYNWELLNESS
 
-Create a tsconfig.json file in the root of your project to specify TypeScript compilation settings:
+## Getting Started
 
-json
-Copy code
+Follow the steps below to set up and run the project on your local machine.
+
+### Prerequisites
+
+Before running the project, ensure you have the following installed:
+
+- Node.js
+- npm or Yarn (preferred)
+
+### Installation
+
+1. Clone the repository or download the project files.
+
+2. Install project dependencies:
+
+```bash
+npm install
+```
+
+or
+
+```bash
+yarn install
+```
+
+### Configuration
+
+1. Run `npm init` to initialize a new Node.js project and follow the prompts to set up your `package.json` file.
+
+2. Install TypeScript and its types for Node.js:
+
+```bash
+npm install typescript @types/node --save-dev
+```
+
+### TypeScript Configuration
+
+3. Create a `tsconfig.json` file in the root of your project to specify TypeScript compilation settings:
+
+```json
 {
-"compilerOptions": {
-"target": "es6",
-"module": "commonjs",
-"outDir": "./dist",
-"rootDir": "./src",
-"strict": true,
-"esModuleInterop": true
-},
-"include": ["src/**/*.ts"],
-"exclude": ["node_modules"]
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
 }
+```
 
-4. Add scripts to the package.json:
+### Scripts
 
-Add the following scripts to the scripts section in your package.json to facilitate TypeScript compilation and running your application:
+4. Add the following scripts to the `package.json` to facilitate TypeScript compilation and running your application:
 
-json
-Copy code
+```json
 "scripts": {
-"build": "tsc",
-"start": "node ./dist/index.js"
+  "build": "tsc",
+  "start": "node ./dist/index.js"
 }
+```
 
-5. Make sure to have a sever running
+### Running the Project
 
-6. npm run build
+Make sure to have a server running.
 
-7. yarn add ts-node
+5. Build the TypeScript code:
+
+```bash
+npm run build
+```
+
+### Running in Development Mode
+
+If you want to run the application in development mode, you can use `ts-node`:
+
+```bash
+yarn add ts-node
+```
+
+Now, you can use `ts-node` to directly run the TypeScript files:
+
+```bash
+ts-node src/index.ts
+```
+
+## Contributing
